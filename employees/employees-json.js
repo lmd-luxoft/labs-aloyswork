@@ -1,4 +1,4 @@
-var DATA = {
+export const DATA = {
 
     employees: [
       {

@@ -1,4 +1,6 @@
 
+import { DATA } from './employees-json';
+
 //Поиск сотрудника по имени и фамилии
 function findByName(name, surname) {
 var Persons = new Array(); //массив 
