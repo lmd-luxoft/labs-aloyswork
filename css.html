@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="site.css"/>
+    </head>
+    <div id="test">****</div>
+    <script>
+        let test = document.getElementById("test");
+        test.addEventListener("mousedown",function(event){
+            let elem = document.getElementById("test");
+            elem.className = "drag";    
+        });
+        test.addEventListener("mouseup",function(event){
+            let elem = document.getElementById("test");
+            elem.className = elem.className.replace("drag","")
+        });
+    </script>
+</html>
