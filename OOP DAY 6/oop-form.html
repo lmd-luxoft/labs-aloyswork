@@ -1,0 +1,28 @@
+<html>
+    <body>
+            <button id="ShowSandbox"> Show form </button>
+            <form id="sandbox" style="visibility: hidden;" onsubmit=OnSubmit()>
+                Username: <input type="text" name ="user"/>
+                Password: <input type="password" name="Pwd"/>
+                <input type="submit"/>
+            </form>
+        <script src="form.js"></script>
+        <script>
+            let frm;
+            
+            function OnSubmit()
+            {
+                frm.hide();
+                alert(frm.User);
+            }
+            let btn = document.getElementById("ShowSandbox");
+
+            btn.addEventListener("click", function() {
+                frm=new Form(document.getElementById("sandbox"));
+                frm.show();
+            }
+
+            );
+        </script>
+    </body>
+</html>

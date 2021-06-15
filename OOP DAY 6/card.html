@@ -1,0 +1,41 @@
+<html>
+    <body>
+            <button id="balance">Запросить баланс</button>
+            <button id="income"> Положить средства</button>
+            <button id="outcome">Снять средства</button>
+
+            <form id="sandbox" onsubmit=OnSubmit()>
+                Баланс: <input type="text" name ="bal" id="balanceform"/>
+
+                Средства: <input type="text" name="money"  id="moneyform"/>
+                
+            </form>
+        <script src="card.js"></script>
+        <script>
+            
+            let btn_balance = document.getElementById("balance");
+            let btn_income = document.getElementById("income");
+            let btn_outcome = document.getElementById("outcome");
+
+            let mycard=new Card();
+            
+            btn_balance.addEventListener("click", function() {
+                document.getElementById("balanceform").value=mycard.getBalance()});
+
+            btn_income.addEventListener("click", function() {
+                let money = document.getElementById("moneyform").value;
+                mycard.income(money);
+                document.getElementById("balanceform").value=mycard.getBalance()});
+
+            btn_outcome.addEventListener("click", function() {
+                let money = document.getElementById("moneyform").value;
+                mycard.outcome(money);                
+                document.getElementById("balanceform").value=mycard.getBalance()});    
+            
+            
+            
+
+            
+        </script>
+    </body>
+</html>

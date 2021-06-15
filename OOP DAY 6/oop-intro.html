@@ -1,0 +1,22 @@
+<html>
+<body>
+    <script>
+        function Foo(x,y)
+        {
+           this.a = x;
+           this.b = y; 
+        }
+
+        let x = new Foo(2,3);
+        //alert(`${x.a}  ${x.b}`)
+
+        x.toString = function() {
+            return this.a + this.b
+        }
+
+        alert(x);
+    </script>
+</body>
+
+
+</html>

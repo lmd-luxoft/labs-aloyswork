@@ -1,0 +1,36 @@
+<html>
+<body>
+    <script>
+        class Base
+            {
+                constructor ()
+                {
+                    this.tag=1;
+                    
+                }
+                
+            }
+
+        class Foo extends Base
+        {
+
+            constructor(x,y)
+            {
+                super();
+                this.a = x;
+                this.b = y;
+            }
+        toString()
+        {
+            return(this.tag + this.a + this.b);
+        }
+        }    
+        
+        let x = new Foo(2,3);
+
+        alert(x);
+    </script>
+</body>
+
+
+</html>

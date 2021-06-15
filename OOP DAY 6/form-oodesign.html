@@ -1,0 +1,22 @@
+<html>
+    <body>
+            <button id="ShowSandbox"> Show form </button>
+            <form id="sandbox" style="visibility: hidden;" onsubmit=OnSubmit()>
+                Username: <input type="text" name ="user"/>
+                Password: <input type="password" name="Pwd"/>
+                <input type="submit"/>
+            </form>
+        <script src="form-oodesign.js"></script>
+        <script>
+                      
+            let btn = document.getElementById("ShowSandbox");
+
+            btn.addEventListener("click", function() {
+                let frm=new Form("sandbox");
+                frm.show();
+            }
+
+            );
+        </script>
+    </body>
+</html>
